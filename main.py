@@ -71,7 +71,7 @@ while True:
         lib.add_book()
     elif menu_choice == "3":
         lib.remove_book()
-    elif menu_choice == "q":
+    elif menu_choice.lower() == "q":
         print("Exiting...")
         break
     else:
