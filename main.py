@@ -18,7 +18,7 @@ class Library:
                 book_author = book_information[1].strip()#Listenin ikinci öğesi yani yazarı alıyoruz.
                 book_release_date = book_information[2].strip()#Listenin üçüncü öğesi yani yayın yılını alıyoruz.
                 book_number_of_pages= book_information[3].strip()#Listenin dördüncü öğesi olana sayfa sayısını alıyoruz.
-                print(f"Book Name: {book_name}, Author: {book_author}, Release Date: {book_release_date}, Number of Pages: {book_number_of_pages}")
+                print(f"Book Name: {book_name}, Author: {book_author}\n")
         else:
             print("There are no books in library")
     def add_book(self):#Kullanıcı books.txt dosyasına kitap ekleyecek.
@@ -56,20 +56,22 @@ class Library:
 lib =Library("books.txt") #lib objesini oluşturduk.
 
 #Menü
+print("***MENU*** \n")
 print("1) List Books:")
 print("2) Add Book:")
 print("3) Remove Book:")
-print("q) Quit:")
+print("q) Quit: \n")
+
 
 while True:
     menu_choice = input("Enter Your Choice: ") #Kullanıcıdan seçeneğini alıyoruz. Hangisini seçerse ona yönlendiriyoruz.
-    if (menu_choice == "1"):
+    if menu_choice == "1":
         lib.list_books()
-    elif (menu_choice == "2"):
+    elif menu_choice == "2":
         lib.add_book()
-    elif (menu_choice == "3"):
+    elif menu_choice == "3":
         lib.remove_book()
-    elif (menu_choice == "q"):
+    elif menu_choice == "q":
         print("Exiting...")
         break
     else:
